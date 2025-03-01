@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Inter", serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+section, footer {
+    padding: 54px 0;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+p {
+    color: #2b2b2b;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+header {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#Logo {
+    width: 50px;
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul a {
+    color: white ;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+}
+
+nav ul a:not(.btn):after {
+    content: "";
+    background-color: rgb(253, 254, 255) ;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+nav ul a:hover::after {
+    width: 100%;
+}
+
+.btn{
+    animation: animate-outline 1s ease-out infinite;
+}
+
+
+@keyframes animate-outline {
+    from {
+        outline: 0px solid #55555577;
+    }    
+    to {
+        outline: 15px solid #4747477e;
+    }
+}
+
+
+.btn {
+    background-color: #383838;
+    color: aliceblue;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+}
+
+.btn:hover {
+    background-color: #2b2b2b;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.banner .banner-text {
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+}
+
+.banner .banner-text h1 {
+    font-size: 96px;
+    color: rgb(250, 250, 250);
+}
+
+.banner .banner-text p {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: lighter;
+    margin: 18px 0;
+}
+
+
+/* Faça mais */
+
+.faca-mais-img {
+    width: 450px;
+    height: 315px;
+}
+
+.faca-mais .container {
+    display: flex;
+    align-items: center;
+}
+
+.faca-mais .faca-mais-text {
+    width: 50%;
+    padding: 0 40px;
+}
+.faca-mais .faca-mais-text h3 {
+    font-size: 56px;
+}
+.faca-mais .faca-mais-text p {
+    margin: 5px 0 10px 0;
+}
+
+.faca-mais-img-segunda {
+    width: 450px;
+    height: 470px;
+}
+
+/*  Cards */
+
+.depoimentos h3 {
+    text-align: center;
+}
+
+.depoimentos p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.cards .img-cards {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    display: block;
+    margin: 10px auto;
+}
+
+.depoimentos .card-item {
+    background-color: #b8b8b8;
+    margin: 15px;
+    border-radius: 14px;
+    text-align: center;
+    width: 350px;
+    transition: 0.3s;
+}
+
+.depoimentos .card-item .nome-user {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.depoimentos .card-item p {
+    font-size: 15px;
+    padding: 0 15px;
+    transition: 0.3s;
+}
+
+.depoimentos .card-item .estrelas {
+    margin: 15px 0;
+    border-top: 2px solid #aaaaaac0;
+}
+
+.depoimentos .card-item .estrelas i {
+    color: #2b2b2b;
+    margin-top: 15px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.depoimentos .card-item:hover {
+    background-color: #2b2b2b;
+    margin: -5px;
+}
+
+.depoimentos .card-item:hover .nome-user, .depoimentos .card-item:hover p, 
+.depoimentos .card-item:hover .estrelas i {
+    color: aliceblue;
+}
