@@ -35,12 +35,14 @@ header {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    height: 100vh;             /* Ocupa 100% da altura da tela */
 }
 
 #Logo {
     width: 50px;
     height: 50px;
 }
+
 
 nav {
     display: flex;
@@ -83,16 +85,16 @@ nav ul a:hover::after {
 
 @keyframes animate-outline {
     from {
-        outline: 0px solid #55555577;
+        outline: 0px solid #29138a4b;
     }    
     to {
-        outline: 15px solid #4747477e;
+        outline: 15px solid #1d15857e;
     }
 }
 
 
 .btn {
-    background-color: #383838;
+    background-color: #16088f;
     color: aliceblue;
     padding: 15px 20px;
     border-radius: 10px;
@@ -102,7 +104,7 @@ nav ul a:hover::after {
 }
 
 .btn:hover {
-    background-color: #2b2b2b;
+    background-color: #1f035f;
 }
 
 .banner {
@@ -132,13 +134,14 @@ nav ul a:hover::after {
 /* Faça mais */
 
 .faca-mais-img {
-    width: 450px;
-    height: 315px;
+    width: 380px;
+    height: 360px;
 }
 
 .faca-mais .container {
     display: flex;
     align-items: center;
+    margin-left: 20%;
 }
 
 .faca-mais .faca-mais-text {
@@ -147,14 +150,17 @@ nav ul a:hover::after {
 }
 .faca-mais .faca-mais-text h3 {
     font-size: 56px;
+    color: rgb(80, 1, 1);
 }
 .faca-mais .faca-mais-text p {
     margin: 5px 0 10px 0;
+    color: rgb(80, 1, 1);
 }
 
 .faca-mais-img-segunda {
-    width: 450px;
-    height: 470px;
+    width: 350px;
+    height: 370px;
+    margin-right: 12px;
 }
 
 /*  Cards */
@@ -223,4 +229,270 @@ nav ul a:hover::after {
 .depoimentos .card-item:hover .nome-user, .depoimentos .card-item:hover p, 
 .depoimentos .card-item:hover .estrelas i {
     color: aliceblue;
+}
+
+
+
+#preco {
+    flex: none; /* Impede que a barra de rolagem se ajuste à largura do contêiner */
+    width: 200px; /* Largura fixa para a barra de rolagem */
+}
+
+
+
+
+
+.filter-container {
+    margin: 20px auto;
+    padding: 15px;
+    background: #f8f7f7;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 35px; /* Espaçamento de 5px entre os filtros */
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.filter-container input, .filter-container button, .filter-container select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+.filter-container button {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+.filter-container button:hover {
+    background-color: #0056b3;
+}
+.filter-container label {
+    font-size: 16px;
+}
+
+
+
+
+
+.gallery-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .gallery-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+
+
+
+
+
+
+
+
+.gallery-wrapper {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    width: 500px;
+    background: #f8f7f7;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.gallery-item .details {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 16px;
+    color: #000000;  /* Cor original dos detalhes (preto) */
+    align-items: center;
+    transition: color 0.3s ease;  /* Transição suave para a cor */
+}
+
+.gallery-item .details i {
+    color: #ffcc00;  /* Ícones amarelos */
+    transition: color 0.3s ease;  /* Transição suave para a cor do ícone */
+}
+
+.gallery-item:hover .details {
+    color: #ffffff;  /* Altera a cor dos detalhes para branco ao passar o mouse */
+}
+
+.gallery-item:hover .details i {
+    color: #ffcc00;  /* Mantém os ícones amarelos mesmo ao passar o mouse */
+}
+
+.gallery-item:hover{
+    background-color: #002855;
+    transform: scale(0.95);  /* Adiciona o efeito de diminuir o container */
+    color: #ccc;
+}
+
+.gallery-item img {
+    width: 450px;
+    height: 350px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(0.95);  /* Adiciona o efeito de diminuir a imagem */
+}
+
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 18px;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+.nav-button:hover {
+    background-color: #b02a37;
+    transform: translateY(-50%) scale(1.1);
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+
+
+
+
+
+/* Modal - Fundo Escuro */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Botão de Fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Imagens Principais */
+.modal-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.modal-images img {
+    width: 250px; /* Aumentando o tamanho das imagens */
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.modal-images img:hover {
+    transform: scale(1.1);
+}
+
+/* Descrição abaixo das imagens */
+#modal-description {
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+    padding: 10px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Botão Voltar */
+.back-btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #0056b3;
+}
+
+
+
+
+html {
+    scroll-behavior: smooth;
 }
